@@ -1,0 +1,2 @@
+<?phpuse GDO\Todo\GDO_Todo;
+use GDO\UI\GDT_ListItem;use GDO\UI\GDT_Title;/** @var $todo GDO_Todo **/$li = GDT_ListItem::make('todo_'.$todo->getID())->gdo($todo);$li->creatorHeader(GDT_Title::make()->titleRaw($todo->displayTitle()));$li->addField($todo->gdoColumn('todo_description'));$li->addField($todo->gdoColumn('todo_priority'));
