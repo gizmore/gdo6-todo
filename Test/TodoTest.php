@@ -107,7 +107,7 @@ final class TodoTest extends TestCase
         assertStringContainsString('Text: Neuer ToDo Text!', $r, 'Test if gizmore can view his own todo item via the edit method');
         
         $r = $this->cli('todo.edit 4');
-        assertStringContainsString('Text: Neuer ToDo Text!', $r, 'Test if gizmore can view his own todo item via the edit method');
+        assertStringContainsString('Neuer ToDo Text!', $r, 'Test if gizmore can view his own todo item via the edit method');
 
         $r = $this->cli('todo.edit');
         assertStringContainsString('Usage: todo.edit.[create]', $r, 'Test if crud shows usage');

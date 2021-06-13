@@ -81,7 +81,7 @@ final class GDO_Todo extends GDO
     
     public function renderList()
     {
-        return GDT_Template::templatePHP(
+        return GDT_Template::php(
             'Todo', 'todo_listitem.php',
             ['todo' => $this]);
     }

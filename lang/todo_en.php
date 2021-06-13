@@ -24,6 +24,7 @@ return [
     'by' => 'by',
     
     # Add
+    'link_todo_add' => 'New ToDo entry',
     'ft_todo_add' => 'Add a ToDo entry.',
     
     # Edit
@@ -39,5 +40,8 @@ return [
     # Complete
     'err_todo_already_completed' => 'This ToDo item has already been completed.',
     'msg_todo_completed' => 'ToDo #%s has been completed by %s on %s.',
+    
+    # Show
+    'mtitle_todo_show' => 'Show a todo entry.',
     
 ];

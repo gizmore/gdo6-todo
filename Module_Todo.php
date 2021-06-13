@@ -55,7 +55,7 @@ final class Module_Todo extends GDO_Module
         {
             GDT_Page::$INSTANCE->leftNav->addFields([
                 GDT_Link::make('link_todo_add')->href(href('Todo', 'Add')),
-                GDT_Link::make('link_todo_search')->href(href('Todo', 'Search')),
+                GDT_Link::make('mtitle_todo_search')->href(href('Todo', 'Search')),
             ]);
         }
     }
