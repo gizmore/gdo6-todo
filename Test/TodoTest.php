@@ -98,9 +98,8 @@ final class TodoTest extends TestCase
     public function testEditTodos()
     {
         $this->userGizmore();
-        $r = $this->cli('todo.edit 4');
-        assertStringContainsString('Assigned', $r, 'Test if gizmore can view his own todo item via the edit method');
-        assertStringContainsString('Assigned', $r, 'Test if gizmore can view his own todo item via the edit method');
+        $r = $this->cli('todo.edit.show 4');
+        assertStringContainsString('edit', $r, 'Test if gizmore can view his own todo item via the edit method');
         
         $r = $this->cli("todo.edit.edit '--text=Neuer ToDo Text!' 4");
         assertStringContainsString('Your ToDo has been updated.', $r, 'Test if gizmore can view his own todo item via the edit method');
