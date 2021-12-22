@@ -16,6 +16,7 @@ use GDO\DB\GDT_EditedBy;
 use GDO\Core\GDT_Template;
 use GDO\User\GDO_User;
 use GDO\DB\GDT_Name;
+use GDO\UI\GDT_Title;
 
 /**
  * ToDo database table/entity.
@@ -31,7 +32,7 @@ final class GDO_Todo extends GDO
     {
         return [
             GDT_AutoInc::make('todo_id'),
-            GDT_Name::make('todo_text')->notNull()->label('text'),
+            GDT_Title::make('todo_text')->notNull()->label('text'),
             GDT_TodoPriority::make('todo_priority')->label('priority'),
             GDT_Message::make('todo_description')->label('description'),
             GDT_CreatedAt::make('todo_created'),

@@ -137,11 +137,12 @@ final class TodoTest extends TestCase
     
     public function testSearch()
     {
-        Module_Table::instance()->saveConfigVar('ipp', '2');
-
+    	Module_Table::instance()->saveConfigVar('ipp_cli', '2');
+    	Module_Table::instance()->saveConfigVar('ipp_http', '2');
+    	
         $r = $this->cli('todo.search');
         assertStringContainsString("Usage: todo.search.", $r, 'Test usage printing for todo search');
-        assertStringContainsString("[--page=<1>]", $r, 'Test nice usage printing for todo search');
+        assertStringContainsString("[--page=<1>", $r, 'Test nice usage printing for todo search');
     
         $r = $this->cli('todo.search --deleted=1 --completed=1');
         assertStringContainsString("4 ToDo's. Page 1/2", $r, 'Test nice pagination usage printing for todo search');
